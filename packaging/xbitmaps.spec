@@ -1,6 +1,6 @@
 Name:           xbitmaps
 Version:        1.1.1
-Release:        0
+Release:        1
 License:        MIT
 Summary:        Base X bitmaps
 Url:            http://xorg.freedesktop.org/releases/individual/data/
@@ -29,7 +29,7 @@ legacy X clients.
 cp %{SOURCE1001} .
 
 %build
-%configure
+%configure --disable-static --libdir=%{_datadir}
 make %{?_smp_mflags}
 
 %install
